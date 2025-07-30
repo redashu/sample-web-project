@@ -6,7 +6,7 @@ pipeline {
         REPO_NAME  = 'https://github.com/redashu/sample-web-project.git'
         BRANCH_NAME = 'master'
         SONAR_TOKEN  = credentials('ashu-sonar-project3-token')
-        DOCKER_CREDS = credentials('ashutoshh-dockerhub')
+        DOCKER_CREDS = 'ashutoshh-dockerhub'
         SONAR_PROJECT_KEY =  'ashu-day3'
         SONAR_SERVER_NAME = 'ashu-sonarqube' // name we have configured under jenkins global confir
     }
