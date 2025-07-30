@@ -78,7 +78,7 @@ pipeline {
             steps{
                 echo 'pushing image to docker hub'
                 script {
-                    def imageName  = "docker.io/dockerashu/ashuwebapp-iis-ltsc2022"
+                    def imageName  = "dockerashu/ashuwebapp-iis-ltsc2022"
                     def imageTag   = "codev1"
                     def hubCred   = "${DOCKER_CREDS}"
                     // calling jenkins pluing docker pipeline to push
