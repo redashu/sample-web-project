@@ -3,6 +3,8 @@ pipeline {
     // defining environment variables 
     environment {
         SONAR_HOME = 'C:\\Users\\Administrator\\Documents\\tools\\sonar-scanner\\bin'
+        REPO_NAME  = 'https://github.com/redashu/sample-web-project.git'
+        BRANCH_NAME = 'master'
     }
 
     stages {
@@ -18,6 +20,13 @@ pipeline {
                 echo ==> java version ==>
                 java --version 
                 """
+            }
+        }
+        // git checkout 
+        stage('taking code of github repo'){
+            steps {
+                echo 'clone repo to project'
+                git url: "${REPO_NAME}", branch: "${BRANCH_NAME}"
             }
         }
      
