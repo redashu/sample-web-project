@@ -36,7 +36,7 @@ pipeline {
         }
         // doing sast with sonar-qube 
         stage('SAST with sonar-scanner'){
-            stpes {
+            steps {
                  echo 'wait for sonar-scanner to finish'
                  // calling plugin
                  script {
