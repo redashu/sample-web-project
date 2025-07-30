@@ -61,7 +61,7 @@ pipeline {
                 echo 'starting docker build process'
                 // to use docker plugin using script 
                 script {
-                    def imageName  = "docker.io\dockerashu\ashuwebapp-iis-ltsc2022"
+                    def imageName  = "docker.io/dockerashu/ashuwebapp-iis-ltsc2022"
                     def imageTag   = "codev1"
                     docker.build("${imageName}:${imageTag}",".")
 
