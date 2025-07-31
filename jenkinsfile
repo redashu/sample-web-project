@@ -10,7 +10,7 @@ pipeline {
         SONAR_PROJECT_KEY =  'ashu-day3'
         SONAR_SERVER_NAME = 'ashu-sonarqube' // name we have configured under jenkins global confir
         IMAGE_NAME  = "dockerashu/ashuwebapp-iis-ltsc2022"
-        IMAGE_TAG =  "codev1"
+        IMAGE_TAG =  "code${TAG_TIMESTAMP}-${BUILD_NUMBER}"
         TRIVY_REPORT = "trivy-ashu-report.txt"
     }
 
