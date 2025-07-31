@@ -77,6 +77,14 @@ pipeline {
             
         }
         // add stage to scan using trivy is no HIgh , critical vuln then proceed else stpo pipeline
+        stage('post build security check using trivy'){
+            steps {
+                echo "doing scan"
+                bat """
+                trivy image --severity HIGH,CRITICAL --format table -o ${TRIVY_REPORT} ${IAMGE_NAME}:${IMAGE_TAG}
+                """
+            }
+        }
         // pushing image  to dockerhub 
         stage('Docker hub image push'){
             steps{
